@@ -35,12 +35,6 @@ agents. Its typed ontology models capabilities, authorization, provenance,
 policy decisions, and audit evidence explicitly; runtime enforcement remains
 intentionally unimplemented.
 
-### [system-config](https://github.com/jefahnierocks/system-config)
-
-Reproducible macOS development-environment configuration and agent tooling,
-with explicit local contracts, security boundaries, and compatibility guidance
-for downstream repositories.
-
 ### [shelltutor](https://github.com/jefahnierocks/shelltutor)
 
 A user-agnostic, single-file Bash course that teaches the shell foundations
