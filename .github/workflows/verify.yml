@@ -1,0 +1,24 @@
+name: Verify repository
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Prepare pinned tools in runner temporary storage
+        id: tools
+        run: python3 -I -S -B scripts/prepare-linux-tools.py
+      - name: Validate exact event revision and source
+        env:
+          PROFILE_MANIFEST_GIT: ${{ steps.tools.outputs.git }}
+        run: '"${{ steps.tools.outputs.python }}" -I -S -B scripts/validate.py --rev "${{ github.sha }}"'
