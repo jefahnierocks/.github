@@ -1,0 +1,39 @@
+spec_version: "1"
+project:
+  id: github-profile
+  display_name: "Jefahnierocks organization profile"
+  owner_entity: jefahnierocks
+role: canonical
+canonical: null
+peers: []
+status:
+  posture: public-repo
+  operational_state: unverified
+  local_phase: "Repository interface adoption; hosted qualification pending"
+  as_of: "2026-10-17"
+authority:
+  status_of_record: "README.md"
+presentation:
+  visibility: public-available
+  public_alias: null
+  link_policy: link-ok
+development:
+  platforms: [macos-arm64, linux-x86_64]
+  commands:
+    setup: null
+    check:
+      runner: mise
+      target: "check"
+    test:
+      runner: mise
+      target: "test"
+    build: null
+    dev: null
+    format_check: null
+    format_write: null
+  environment:
+    owner: none
+    template: null
+    secret_launcher: null
+  stacks: {}
+  host_requirements: []

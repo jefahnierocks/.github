@@ -1,0 +1,19 @@
+min_version = "2026.10.8"
+
+[tools]
+python = "3.13.16"
+
+[settings]
+lockfile = true
+lockfile_platforms = ["macos-arm64", "linux-x64"]
+auto_install = false
+exec_auto_install = false
+task.run_auto_install = false
+
+[tasks.check]
+description = "Validate the repository declaration and source tests offline"
+run = "python -I -S -B scripts/validate.py"
+
+[tasks.test]
+description = "Run the same complete offline source gate"
+depends = ["check"]
