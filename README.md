@@ -7,9 +7,16 @@ workflow templates and organization policy require their own owner decision.
 
 ## Current status
 
-The existing profile is unchanged. The Specification 1 interface has passed its
-native source checks and mise launcher in temporary task state. Hosted
-qualification is pending. No runtime service or producer admission is claimed.
+The existing profile is unchanged. The Specification 1 interface passed its
+native source checks and mise launcher in temporary task state. GitHub Actions
+records successful first push and pull-request checks on 2026-10-17 for
+[PR #2](https://github.com/jefahnierocks/.github/pull/2) head
+`184bf471675e4fc26767082d077b06883f7e2cfc`:
+[push verification](https://github.com/jefahnierocks/.github/actions/runs/39066587057)
+and [PR verification](https://github.com/jefahnierocks/.github/actions/runs/39066624876).
+That dated evidence applies to that head; later revisions need their own native
+validation and hosted checks. It establishes neither main landing nor ordinary
+persistent-user readiness. No runtime service or producer admission is claimed.
 Full child-baseline adoption, including a license decision for this repository's
 own material and a standing secret-scanning gate,
 remains separate owner work. The vendored MIT release retains its own license.
